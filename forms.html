@@ -5,33 +5,37 @@
     <title>Register With Us</title>
 </head>
 <body>
+<header>
+    <h1>Veridian Dynamics</h1>
+</header>
+
     <form action="https:///request-inspector.glitch.me" method="post">
         <label for="email">Email</label>
         <input id="email" name="email" type="text" placeholder="name@myemail.com">
         <label for="pw">Password</label>
         <input id="pw" name="password" type="password" placeholder="myPassword">
         <br>
-        <label for="blog-post">Bio</label>
+        <label for="bio">Bio</label>
         <br>
-        <textarea name="blog-post" id="blog-post" cols="50" rows=10 placeholder="all about me"></textarea>
+        <textarea name="bio" id="bio" cols="50" rows=10 placeholder="type bio here"></textarea>
         <br>
         <h4>How did you hear about us?</h4>
-        <input name="quiz" id="quiz-a" type="radio" value="billboard"> <label for="quiz-a">billboard</label>
-        <input name="quiz" id="quiz-b" type="radio" value="radio advertisement"> <label for="quiz-b">radio advertisement</label>
-        <input name="quiz" id="quiz-c" type="radio" value="internet advertisement"> <label for="quiz-c">internet advertisement</label>
-        <input name="quiz" id="quiz-d" type="radio" value="other"> <label for="quiz-d">other</label>
+        <input name="advert" id="advert-a" type="radio" value="billboard"> <label for="advert-a">billboard</label>
+        <input name="advert" id="advert-b" type="radio" value="radio advertisement"> <label for="advert-b">radio advertisement</label>
+        <input name="advert" id="advert-c" type="radio" value="internet advertisement"> <label for="advert-c">internet advertisement</label>
+        <input name="advert" id="advert-d" type="radio" value="other"> <label for="advert-d">other</label>
         <br>
         <br>
-        <label for="dropdown">what web browser are you using</label>
+        <label for="dropdown">what web browser are you using?</label>
         <br>
         <br>
                  <select name="dropdown" id="dropdown">
-                     <option value="osx">Mac</option>
-                     <option value="linux">linux</option>
-                     <option value="windows">PC</option>
+                     <option value="firefox">firefox</option>
+                     <option value="safari">safari</option>
+                     <option value="chrome">chrome</option>
+                     <option value="opera">opera</option>
                   </select>
-        <!-- <input type="submit">-->
-        <button type="submit">Submit</button>
+                        <button type="submit">Submit</button>
 
     </form>
 </body>
