@@ -34,13 +34,39 @@ h1 { text-align: center; }
 h1 {
 text-decoration: underline; }
 
-body { background-color:red; }
+body { background-color:white; }
 
 body {
-    background-image: url(Css-Background.jpg);
-    background-color: #000f00;
+    background-image: url('../img/cliff.jpg');
+
 }
 
 body {
-    color: #FFFFFF
+    color: #ffffff
+}
+
+ol { list-style: lower-alpha; }
+ul { list-style: triangle; }
+
+body { font-family: 'Shadows Into Light', cursive; }
+
+table {
+    font-size: 1em;
+}
+
+td {
+    font-size: 2em;
+}
+
+tr {
+    font-size: 15px;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+   font-size: 25px;
 }
