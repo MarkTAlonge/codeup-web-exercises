@@ -12,11 +12,11 @@ body {
 
 .wrapper {
     /* TODO: make the wrapper a grid container */
-    display: inline-grid;
+    display: grid;
     /* TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
-    grid-template-columns: auto 400px 400px 400px auto;
+    grid-template-columns: 1fr 400px 400px 400px 1fr;
     /* TODO: add a gap of 1em around all grid items */
-    row-gap: 1em;
+    grid-gap: 1em;
     /* no row properties are needed */
     /* TODO: the height of the wrapper should be 100 viewport height units */
     height: 100vh;
@@ -32,8 +32,8 @@ header {
     background: purple;
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns */
     display: inline-grid;
-    grid-area: 1 / span 5;
-    grid-column: 2 / span 3;
+    grid-area: 1 / 2 / 2/ 5 ;
+
 
 }
 
@@ -83,7 +83,7 @@ header a:hover {
 .header-background {
     background: purple;
     /* TODO: define the grid area of this element to take up the entire first row of the .container grid  */
-    grid-area: 1;
+    grid-area: 1 / 1 / 2 / -1;
 }
 
 nav ul {
