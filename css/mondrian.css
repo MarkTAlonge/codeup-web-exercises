@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+
+
+
+}
+main {
+    margin-top: 0;
+    display: inline-grid;
+
+
+
+}
+
+
+.grid-container {
+    display: inline-grid;
+    grid-gap: 0 0;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 500px;
+
+
+
+
+}
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgb(11, 46, 90);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+
+}
+
+.two {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: rgb(218, 8, 9);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    background-color: rgb(198, 159, 26);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.four {
+    grid-column-start: 3;
+    grid-column-end: 1;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    background-color: rgb(218, 8, 9);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.five {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    background-color: rgb(11, 46, 90);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.six {
+    grid-column-start: 9;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 6;
+    background-color: rgb(198, 159, 26);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.seven {
+    grid-column-start: 3;
+    grid-column-end: 1;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    background-color: rgb(255, 255, 255);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.eight {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    background-color: rgb(255, 255, 255);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.nine {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 9;
+    grid-column-end: 5;
+    background-color: rgb(255, 255, 255);
+    border: 2.5px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
