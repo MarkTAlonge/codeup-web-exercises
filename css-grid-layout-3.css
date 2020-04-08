@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+main {
+    background-color: gold;
+    margin-top: 0;
+    display: inline-grid;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 0 0;
+    padding: 0;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px;
+
+}
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 10px;
+    border: white solid 2px;
+
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 3;
+    border: white solid 2px;
+    padding: 10px;
+
+}
+.three {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    padding: 10px;
+    border: white solid 2px;
+}
+.four {
+    grid-column-start: 9;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    padding: 10px;
+    border: white solid 2px;
+}
+.five {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    padding: 10px;
+    border: white solid 2px;
+}
+.six {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    padding: 10px;
+    border: white solid 2px;
+}
+.seven {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    padding: 10px;
+    border: white solid 2px;
+}
+.eight {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    padding: 10px;
+    border: white solid 2px;
+}
+.nine {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    padding: 10px;
+    border: white solid 2px;
+
+.ten {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    padding: 10px;
+    border: white solid 2px;
+}
