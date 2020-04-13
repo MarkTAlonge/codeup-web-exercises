@@ -99,6 +99,7 @@ main {
     grid-row-end: 7;
     padding: 10px;
     border: white solid 2px;
+}
 
 .ten {
     grid-column-start: 1;
