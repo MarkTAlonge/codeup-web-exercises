@@ -51,12 +51,22 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
         var first = ['yesterday','today', 'tomorrow', 'before'];
-    console.log(first[0]);
+        function firstArray(day){
+            return first[0]
+        }
+    console.log(firstArray(first));
 
         var second = ['then', 'here','when', 'now'];
-    console.log(second[1]);
+        function secondArray(when) {
+            return second[1]
+        }
+    console.log(secondArray(second));
 
         var last = ['how', 'now', 'brown', 'cow', 'that', 'one'];
-    console.log(last[5]);
+        function lastArray(cow) {
+            return last.length -1
+        }
+    console.log(lastArray(last));
 })();
