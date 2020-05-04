@@ -73,14 +73,16 @@ console.log (sayHello(myName));
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+
 var num = 2;
 function isTwo(num) {
     return true;
 }
-console.log (num === ("2")), false;
-console.log (num === (2)), true;
-console.log (num ===(4)), false;
-console.log (num ===("five")), false;
+console.log (num == ("2"));
+console.log (num === (2));
+console.log (num === (4));
+console.log (num === ("five"));
+console.log (Math.floor(Math.random));
 
 
 
@@ -114,15 +116,13 @@ console.log(calculateTip(0.15, 33.42)); // returns 5.013
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-(function calculateTip() {
-    var bill1 = prompt ("How much was your bill?");
-    var tip1 = prompt ("What tip amount do you want to add in decimals?");
-    var tip2 = ("  Your tip amount:" + "= " + (bill1 * tip1));
-    var bill2  = (bill1 + tip2);
-    var bill3 = alert (" Your bill = " + bill2);
-
-})();
-
+// (function calculateTip() {
+//     var bill1 = prompt ("How much was your bill?");
+//     var tip1 = prompt ("What tip amount do you want to add in decimals?");
+//     var tip2 = ("  Your tip amount:" + "= " + (bill1 * tip1));
+//     var bill2  = (bill1 + tip2);
+//     var bill3 = alert (" Your bill = " + bill2);
+// })();
 
 /**
  * TODO:
