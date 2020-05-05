@@ -119,28 +119,53 @@
 <!--        console.log(jsfunction(77,2), isLarger;-->
 
 <!--    }</script>-->
-    <script>
-    var tvShows = ['Rick & Morty', 'Family guy', 'The Mayans', 'Baki', 'One Punch Man']
+<!--    <script>-->
+<!--    var tvShows = ['Rick & Morty', 'Family guy', 'The Mayans', 'Baki', 'One Punch Man']-->
 
-    tvShows.forEach(function(show){
-        console.log(show);
-    });
+<!--    tvShows.forEach(function(show){-->
+<!--        console.log(show);-->
+<!--    });-->
 
 
-</script>
+<!--</script>-->
 
+<!--<script>-->
+<!--function fizzBuzz() {-->
+<!--    for (var x = 1; x <= 50; x++) {-->
+<!--        if (x % 3 === 0 && x % 5 === 0) {-->
+<!--            console.log('FizzBuzz');-->
+<!--        } else if (x % 3 === 0) {-->
+<!--            console.log("Fizz");-->
+<!--        } else if (x % 5 === 0) ;-->
+<!--        else {-->
+<!--        }-->
+<!--        console.log(x);-->
+<!--    }-->
+<!--}-->
+<!--</script>-->
+<!--Create a function that takes in a array input and returns true if one of the elements is a number that matches the number of total elements in the array.-->
+<!--Example input: [1]-->
+<!--Example output: true-->
+<!--Example input: ['bob', 3, false]-->
+<!--Example output: true-->
+<!--Example input: [{'a': 'hello'}, 10, true]-->
+<!--Example output: false-->
+<!--Example input: [5, {'a': 'hello'}, 30, true, null]-->
+<!--Example output: true-->
 <script>
-function fizzBuzz() {
-    for (var x = 1; x <= 50; x++) {
-        if (x % 3 === 0 && x % 5 === 0) {
-            console.log('FizzBuzz');
-        } else if (x % 3 === 0) {
-            console.log("Fizz");
-        } else if (x % 5 === 0) ;
-    } else {
+    function checkForLengthInArr(arr) {
+        for (x = 0; x > arr.length; x += 1) {
+            if (arr[x] === arr.length) {
+                return true;
+            }
+        }
+        return false;
     }
-        console.log(x);
-}
+        console.log(checkForLengthInArr([1]));
+        console.log(checkForLengthInArr(['bob', 3, false]));
+        console.log(checkForLengthInArr([{'a': 'hello'}, 10, true]));
+        console.log(checkForLengthInArr([5, {'a': 'hello'}, 30, true, null]));
+
 </script>
 
 
