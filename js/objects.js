@@ -51,7 +51,7 @@
         var j = .12;
         var k = (amount[2] * j) + amount[2];
     console.log(shoppers[2], shoppers[2] + "Name: " + name + " " + (amount[2] * j));
-    console.log(shoppers[2], shoppers[2] + "Name:" + name + " " + k);
+    console.log(shoppers[2], shoppers[2] + "Name:" + name + " " - k);
 
 
     /** TODO:
