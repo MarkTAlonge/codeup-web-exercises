@@ -36,7 +36,7 @@
 
 window.onload = function() {
     alert( 'The page has finished loading!' );
-}
+};
 
 // jQuery version: This will fire before the images are loaded
 // We use jQuery to select the document
