@@ -16,13 +16,52 @@
 <div id='map'></div>
 <script src= "js/keys.js">
 </script>
+
+<button id="btn1">Zoom to 15X</button>
 <script>
+    'use strict';
+
     mapboxgl.accessToken = mapboxKeyFour;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom:15,
-        center: {lng: -98.491142, lat: 29.424349}
+        zoom: 20,
+        center: {lng: -98.4916, lat: 29.4252}
+    });
+
+    // create a handler function
+    var listener = function (event) {
+    };
+</script>
+<script>
+    // register the listener to handle clicks on btn1
+    document.getElementById('btn1').addEventListener('click', listener);
+
+    mapboxgl.accessToken = mapboxKeyFour;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 9,
+        center: {lng: -98.4979665, lat: 29.610004}
+    });
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4979665, 29.610004])
+        .addTo(map);
+
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-98.4579665, 29.610004])
+        .addTo(map);
+    var foodPopUp = new mapboxgl.Popup()
+        .setHTML("<h3>Chama Gaucha Try eating here, its delicioso!</h3>")
+        .addTo(map);
+        map.zoomTo(17);
+
+
+    marker.setPopup(foodPopUp);
+
+    popup.on('close', function(){
+
     });
 </script>
 </body>
