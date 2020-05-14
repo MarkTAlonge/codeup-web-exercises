@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<audio id="play" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Street_Fighter_Perfect_Sound_Effect.mp3"></audio>
+
+<script src='js/jquery-2.2.4.js'></script>
+<script>
+    "use strict";
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
+
+
+    // the 'official' Konami Code sequence
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+    // a variable to remember the 'position' the user has reached so far.
+    var konamiCodePosition = 0;
+
+
+    // add keydown event listener
+    document.addEventListener('keydown', function(e) {
+        // get the value of the key code from the key map
+        var key = allowedKeys[e.keyCode];
+        // get the value of the required key from the konami code
+        var requiredKey = konamiCode[konamiCodePosition];
+
+        // compare the key with the required key
+        if (key == requiredKey) {
+
+            // move to the next key in the konami code sequence
+            konamiCodePosition++;
+
+            // if the last key is reached, activate cheats
+            if (konamiCodePosition == konamiCode.length) {
+                activateCheats();
+                konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+    });
+
+    function activateCheats() {
+
+
+        var audio = new Audio('http://soundfxcenter.com/video-games/street-fighter/8d82b5_Street_Fighter_Perfect_Sound_Effect.mp3');
+        audio.play();
+
+        alert("You have added 30 live!");
+        $("h1").css({
+            "background-color": "#fff",
+            "font-size": "200px",
+
+
+        });
+        var mkKeys = {
+            40: 'down',
+            38: 'up',
+            37: 'left',
+            65: 'a',
+            39: 'right',
+
+        };
+        var mkKode = ['down', 'up', 'left', 'left', 'a', 'right', 'down'];
+
+        var mkKodePosition = 0;
+
+        document.addEventListener('keydown', function (e) {
+            // get the value of the key code from the key map
+            var key = mkKeys[e.keyCode];
+            // get the value of the required key from the konami code
+            var requiredKey = mkKode[mkKodePosition];
+
+            // compare the key with the required key
+            if (key == requiredKey) {
+
+                // move to the next key in the konami code sequence
+                mkKodePosition++;
+
+                // if the last key is reached, activate cheats
+                if (mkKodePosition == mkKode.length) {
+                    activateCheats2();
+                    mkKodePosition = 0;
+                }
+            } else {
+                mkKodePosition = 0;
+            }
+        });
+
+        function activateCheats2() {
+
+
+            var audio = new Audio('http://soundfxcenter.com/video-games/mortal-kombat-3-trilogy/8d82b5_Mortal_Kombat_3_Frosty_Sound_Effect.mp3');
+            audio.play();
+
+            alert("Git um Killer");
+            $("body").css({
+                "background-color": "#000",
+                "font-size": "200px",
+            })
+        }
+    }
+
+</script>
+
+<form>
+</form>
+</body>
+</html>
