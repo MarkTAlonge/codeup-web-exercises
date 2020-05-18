@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joke and Quote Page</title>
+    <script src=" js/jquery-2.2.4.js"></script>
+</head>
+<body>
+<div id = "jokesOrWeather">
+<script>
+// $.get('(http://www.icndb.com/api/)', {}).click(function (data) {
+// });
+// $.get('(http://quotes.stormconsultancy.co.uk/api)', {}).click(function (data) {
+// });
+
+// $.post('(http://www.icndb.com/api/)', {}).done(function (data) {
+    $.post('http://www.icndb.com/api/', function(data) {
+    var txt = data;
+    txt = "<div>" + "data" + "</div>";
+    $(data).html(txt);
+        $("#jokeData").html(data);
+
+});
+$.post('http://quotes.stormconsultancy.co.uk/api', {}).done(function (data) {
+    var txt = data;
+    txt = "<div>" + "data" + "</div>";
+    $(data).html(txt);
+    $("#weatherData").html(data);
+
+})
+
+
+</script>
+</div>
+<button id="jokeData">Joke</button>
+<button id = "weatherData">Weather</button>
+</body>
+</html>
