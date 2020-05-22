@@ -7,32 +7,36 @@
 </head>
 <body>
 <div id = "jokesOrWeather">
+
 <script>
-// $.get('(http://www.icndb.com/api/)', {}).click(function (data) {
+// $.get('(tp://api.icndb.com/jokes/random)', {}).done(function (data) {
 // });
-// $.get('(http://quotes.stormconsultancy.co.uk/api)', {}).click(function (data) {
+// $.get('(http://quotes.stormconsultancy.co.uk/api)', {}).click(function (data1) {
 // });
-
+//
 // $.post('(http://www.icndb.com/api/)', {}).done(function (data) {
-    $.post('http://www.icndb.com/api/', function(data) {
-    var txt = data;
-    txt = "<div>" + "data" + "</div>";
-    $(data).html(txt);
-        $("#jokeData").html(data);
+    $.post('https://cors-anywhere.herokuapp.com/http://www.icndb.com/api/', function(data) {
+        var txt = success;
+        success = "<div>" + "data" + "</div>";
+        $(data).html(success);
+        $("#jokeData").html(function (success, value) {
+            // ${ "type": "success", "value": { "id": , "joke":
+            // }
 
-});
-$.post('http://quotes.stormconsultancy.co.uk/api', {}).done(function (data) {
-    var txt = data;
-    txt = "<div>" + "data" + "</div>";
-    $(data).html(txt);
-    $("#weatherData").html(data);
+        });
+        $.get('http://quotes.stormconsultancy.co.uk/quotes/1.json?callback=my_method', {}).done(function (data) {
+            var txt = callback;
+            txt = "<div>" + "txt" + "</div>";
+            $(data).html(txt);
+            $("#progQuote").html(callback);
 
-})
+        });
 
+   })
 
 </script>
 </div>
-<button id="jokeData">Joke</button>
-<button id = "weatherData">Weather</button>
+<button onclick="jokeData">CN Joke</button>
+<button onclick= "progQuote">Prog Quote</button>
 </body>
 </html>

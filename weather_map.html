@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather MAP</title>
+    <link rel = stylesheet href ="css/weather_map.css">
+</head>
+<body>
+<header class ="header">
+        <a>Weather App</a>
+    <a>Current City</a>
+</header>
+<label for="text">Place </label>
+<input id= "text" type="text" placeholder="Search Place..">
+<button id = "searchBtn"> Find </button>
+<div>
+<div class = "container">
+
+<div class="cards">
+    <div class = "column">
+        <header id="weatherHeader1">
+        </header>
+        <p id = "weatherInfoA1" ></p>
+        <p id = "weatherInfoA2" ></p>
+        <p id = "weatherInfoA3" ></p>
+        <p id = "weatherInfoA4" ></p>
+        <p id = "weatherInfoA5" ></p>
+    </div>
+
+
+</div>
+<br>
+    <div class="cards">
+        <div class = "column">
+            <header id="weatherHeader2">
+            </header>
+            <p id = "weatherInfoB1" ></p>
+            <p id = "weatherInfoB2" ></p>
+            <p id = "weatherInfoB3" ></p>
+            <p id = "weatherInfoB4" ></p>
+            <p id = "weatherInfoB5" ></p>
+
+        </div>
+
+
+    </div>
+    <br>
+    <div class="cards">
+        <div class = "column">
+            <header id="weatherHeader3">
+
+            </header>
+            <p id = "weatherInfoC1" ></p>
+            <p id = "weatherInfoC2" ></p>
+            <p id = "weatherInfoC3" ></p>
+            <p id = "weatherInfoC4" ></p>
+            <p id = "weatherInfoC5" ></p>
+
+
+        </div>
+
+
+    </div>
+    <br>
+    <div class="cards">
+        <div class = "column">
+            <header id="weatherHeader4">
+
+            </header>
+            <p id = "weatherInfoD1" ></p>
+            <p id = "weatherInfoD2" ></p>
+            <p id = "weatherInfoD3" ></p>
+            <p id = "weatherInfoD4" ></p>
+            <p id = "weatherInfoD5" ></p>
+
+
+        </div>
+
+
+    </div>
+    <br>
+    <div class="cards">
+        <div class = "column">
+            <header id="weatherHeader5">
+
+            </header>
+            <p id = "weatherInfoE1" ></p>
+            <p id = "weatherInfoE2" ></p>
+            <p id = "weatherInfoE3" ></p>
+            <p id = "weatherInfoE4" ></p>
+            <p id = "weatherInfoE5" ></p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+<!--Jquery-->
+<script src = "js/jquery-2.2.4.js"></script>
+
+    <script src='js/keys.js'>
+    </script>
+
+
+<script>
+    "use strict";
+    var weatherURL ="https://api.openweathermap.org/data/2.5/onecall";
+    var weatherOptions = {
+        lat: 29.4241,
+        lon: -98.4936,
+        appid: OPEN_WEATHER_APPID,
+        exclude: 'minutely, current, hourly',
+        units: 'imperial',
+        timezone: 'chicago'
+};
+
+    $.getJSON(weatherURL, weatherOptions).done(function(data) {
+        console.log(data);
+        // console.log(data.daily[0]);
+        // console.log(data.daily[1]);
+        // console.log(data.daily[2]);
+        // console.log(data.daily[3]);
+        // console.log(data.daily[4]);
+        for (var i = 0; i < 1; i++) {
+
+            var date = new Date(data.daily[0].dt * 1000).toDateString();
+            $('#weatherHeader' + (i + 1)).html(date);
+
+        }
+        var maxTempInfo = data.daily[0].temp.max;
+        $('#weatherInfoA1' + "<p></p>" + (i)).html(maxTempInfo);
+
+    });
+
+
+
+
+
+
+
+</script>
+
+</div>
+
+</body>
+</html>
