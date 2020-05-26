@@ -37,6 +37,8 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+console.log(users);
+
 
 let threeLangs = users.filter((user) => user.languages.length > 2);
 console.log(threeLangs);
@@ -62,7 +64,7 @@ let longestEmail = users.reduce((longestEmail, user)=> {
             return user.email
         }
 });
-    console.log(longestEmail)
+    console.log(longestEmail);
 
 // const instructorsStr = users.reduce((names, user)=> {
 // // //     return names + " " + "your instructors names are" + " " + user.name
